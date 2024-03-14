@@ -1,0 +1,9 @@
+{
+  "name": "start-page",
+  "version": "1.0.0",
+  "description": "The start page when opening a new tab.",
+  "main": "index.js",
+  "repository": "https://github.com/michaeljrogers1994/start-page.git",
+  "author": "Michael Rogers",
+  "license": "MIT"
+}
