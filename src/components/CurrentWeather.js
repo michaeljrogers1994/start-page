@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import WeatherIcon from './WeatherIcon';
 
 const CurrentWeather = () => {
   const [weather, setWeather] = useState(null);
@@ -13,7 +14,7 @@ const CurrentWeather = () => {
           {
             params: {
               q: 'Tucson',
-              appid: '436c04c51e9621cd040868accde2d714', // Replace with your OpenWeatherMap API key
+              appid: process.env.REACT_APP_OPENWEATHER_API_KEY,
               units: 'imperial', // You can change units to 'imperial' for Fahrenheit
             },
           }
@@ -40,11 +41,9 @@ const CurrentWeather = () => {
   const { main, weather: weatherInfo } = weather;
 
   return (
-    <div>
-      <h1>Current Weather in Tucson</h1>
-      <p>Temperature: {main.temp} °F</p>
-      <p>Humidity: {main.humidity}%</p>
-      <p>Description: {weatherInfo[0].description}</p>
+    <div style = {{borderRadius: '20px', border: "solid white 1px", width: 'max-content', padding: '10px'}}>
+      <h2><WeatherIcon description={weatherInfo[0].description}/> {main.temp} °F</h2>
+      <p>Tucson</p>
     </div>
   );
 };
