@@ -13,6 +13,7 @@ const CurrentTime = () => {
 
   return (
     <div>
+      <p>{currentTime.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</p>
       <p>{currentTime.toLocaleTimeString()}</p>
     </div>
   );
