@@ -12,7 +12,7 @@ const styles = {
       textDecoration: 'none',
       color: 'black',
       padding: '16px',
-      backgroundColor: '#f1f1f1',
+      backgroundColor: '#5A5A5A',
       borderRadius: '8px',
       transition: 'transform 0.2s',
     },

@@ -15,7 +15,6 @@ function App() {
   return (
     <div className='App'>
       <TimeOfDayGreeting/>
-      <CurrentTime/>
       <CurrentWeather/>
       <SearchBar/>
       <ShortcutPage shortcuts={shortcuts} />
